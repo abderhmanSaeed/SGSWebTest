@@ -1,0 +1,55 @@
+﻿@model SGSWeb.Core.Models.BonusTbl
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h1>Details</h1>
+
+<div class="container p-3 my-3 border">
+    <h1>Employee Details</h1>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.EmpName)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.EmpName)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Level)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Level)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.JDate)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.JDate)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Sarlary)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Sarlary)
+            </dd> <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Performanse)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Performanse)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.depTbl.DepNAme)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.depTbl.DepNAme)
+            </dd>
+    </dl>
+    <div>
+        <a class="btn btn-primary" asp-action="AddOrEdit" asp-route-employeeId="@Model.EmpID">Edit</a>
+        <a class="btn btn-danger" asp-action="Index">Back</a>
+    </div>
+</div>

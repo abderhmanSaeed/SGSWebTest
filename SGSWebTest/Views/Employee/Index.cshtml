@@ -1,0 +1,99 @@
+﻿@model IEnumerable<SGSWeb.Core.Models.BonusTbl>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Employee List</h1>
+
+<spam style="text-align:right;margin-right:20px;">
+    <a class="btn btn-outline-primary" asp-action="Create">Create New</a>
+</spam>
+
+
+
+<form asp-controller="Employee" asp-action="ExportExpencesToExcel" method="post">
+    
+
+<p style="text-align:right;margin-right:20px;">
+    <input class="btn btn-outline-primary" type="submit" value = "Export Excel" </input>
+</p>
+
+</form>
+
+ @* @Html.ActionLink("Export Excel", "ExportExpencesToExcel", "Employee", null, new { @class = "btn btn-info col md-2" })
+*@
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.EmpName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Level)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.JDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Sarlary)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Performanse)
+                </th>  
+                 <th>
+                    @Html.DisplayNameFor(model => model.Bonus)
+                </th> 
+                <th>
+                    @Html.DisplayNameFor(model => model.depTbl.DepNAme)
+                </th>
+                <th></th>
+                <th>Edit </th>
+                <th>Details </th>
+                <th>Delete </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmpName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Level)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.JDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sarlary)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Performanse)
+                </td> 
+                <td>
+                    @Html.DisplayFor(modelItem => item.Bonus)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.depTbl.DepNAme)
+                </td>
+                <td>
+                <td class="text-center">
+                    <a asp-action="AddOrEdit" class="btn btn-outline-primary"  asp-route-employeeId ="@item.EmpID">Edit</a>
+                </td>
+                <td class="text-center">
+                    <a asp-action="Details" class="btn btn-outline-info"  asp-route-employeeId="@item.EmpID">Details</a>
+                </td>
+                <td class="text-center">
+
+                    <a asp-action="Delete" class="btn btn-danger" asp-route-employeeId ="@item.EmpID">Delete</a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+    @ViewBag.Total
+    </div>

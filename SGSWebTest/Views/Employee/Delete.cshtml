@@ -1,0 +1,60 @@
+﻿@model SGSWeb.Core.Models.BonusTbl
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Delete</h1>
+
+
+<h2>Deleting Employee</h2>
+
+<h3>Would you like to continue?</h3>
+<div class="container p-3 my-3 border">
+    <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.EmpName)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.EmpName)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Level)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Level)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.JDate)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.JDate)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Sarlary)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Sarlary)
+            </dd> <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Performanse)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Performanse)
+            </dd> 
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.depTbl.DepNAme)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.depTbl.DepNAme)
+            </dd>
+        </dl>
+
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="EmpID" />
+                <input class="btn btn-primary" type="submit" value="Yes" />
+                <a class="btn btn-danger" asp-action="Index">No</a>
+            </form>
+
+ </div>

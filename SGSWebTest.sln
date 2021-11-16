@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SGSWebTest", "SGSWebTest\SGSWebTest.csproj", "{21BED01E-A6CE-461D-B362-8A94F7FDAAA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SGSWeb.Core", "SGSWeb.Core\SGSWeb.Core.csproj", "{8DFC5F8C-1053-4566-95C3-9A70BAECC75F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SGSWeb.EF", "SGSWeb.EF\SGSWeb.EF.csproj", "{C74BB5C1-483B-44A8-96AE-6EBC69354D7B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{21BED01E-A6CE-461D-B362-8A94F7FDAAA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21BED01E-A6CE-461D-B362-8A94F7FDAAA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21BED01E-A6CE-461D-B362-8A94F7FDAAA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21BED01E-A6CE-461D-B362-8A94F7FDAAA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DFC5F8C-1053-4566-95C3-9A70BAECC75F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DFC5F8C-1053-4566-95C3-9A70BAECC75F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DFC5F8C-1053-4566-95C3-9A70BAECC75F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DFC5F8C-1053-4566-95C3-9A70BAECC75F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C74BB5C1-483B-44A8-96AE-6EBC69354D7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C74BB5C1-483B-44A8-96AE-6EBC69354D7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C74BB5C1-483B-44A8-96AE-6EBC69354D7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C74BB5C1-483B-44A8-96AE-6EBC69354D7B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2F7F5AFE-862C-46FC-85B8-A630AF35D7F1}
+	EndGlobalSection
+EndGlobal
