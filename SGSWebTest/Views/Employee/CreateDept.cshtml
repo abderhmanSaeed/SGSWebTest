@@ -1,0 +1,41 @@
+﻿
+
+
+@model SGSWeb.Core.Models.DepTbl
+
+@{
+    ViewData["Title"] = "CreateDept";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>CreateDept</h1>
+
+<div class="container p-3 my-3 border" >
+   
+
+    <div class="row">
+        <div class="col-sm-6">
+            <hr />
+            <form asp-action="AddDept">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+              
+                <div class="form-group">
+                    <label asp-for="DepNAme" class="control-label"></label>
+                    <input asp-for="DepNAme" class="form-control" />
+                    <span asp-validation-for="DepNAme" class="text-danger"></span>
+                </div>
+                
+          
+                <div class="form-group">
+                    <input class="btn btn-primary" type="submit" value="Save" />
+                    <a class="btn btn-danger" asp-action="Index">Back</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+
+

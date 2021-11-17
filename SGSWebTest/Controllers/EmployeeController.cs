@@ -70,6 +70,8 @@ namespace SGSWebTest.Controllers
             ViewBag.DepTpl = _unitOfWork.DepTbls.GetAll();
             return View();
         }
+
+      
         [HttpPost("AddOne")]
         public IActionResult AddOne(BonusTbl bonusTbl)
         {
@@ -103,6 +105,24 @@ namespace SGSWebTest.Controllers
            // return Ok(employee);
         }
 
+        public IActionResult CreateDept()
+        {
+
+            return View();
+        }
+
+        [HttpPost("AddDept")]
+        public IActionResult AddDept(DepTbl depTbl)
+        {
+          
+
+            var employee = _unitOfWork.DepTbls.Add(depTbl);
+
+          
+            _unitOfWork.Complete();
+            return RedirectToAction(nameof(Index));
+            // return Ok(employee);
+        }
         public ActionResult Delete(int? employeeId)
         {
             if (employeeId == null)
